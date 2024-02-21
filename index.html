@@ -17,7 +17,7 @@
                 <img src="bakgrouncolor.png" id="backgourcolor">
                 <img src="cloud1.png" id="cloud1" >
                 <img src="cloud2.png" id="cloud2">
-                <h2 id="text"><Strong>Sunflower Field</Strong></h2>
+                <h2 id="text">Sunflower Field</h2>
                 <img src="sunflower1.png" id="sunflower1">
                 <a href="#" id="btn">Explore</a>
             </div>
@@ -33,6 +33,14 @@
             let sunflower1 = document.getElementById('sunflower1');
             let text = document.getElementById('text');
             let btn = document.getElementById('btn');
+            
+            btn.addEventListener('click', function(){
+                const nextsection = document.getElementById('section1').offsetTop;
+                window.scrollTo({
+                    top: nextsection,
+                    behavior:'smooth'
+                })
+            })
 
             window.addEventListener('scroll', function(){
                 let value=window.scrollY;
@@ -46,10 +54,20 @@
 
 
 
-        <div class="sec">
+        <div class="sec" id="section1">
             <h2>Hello!</h2>
             <p>Hey this is me, Lara. I'm trying to do this wavey thing that I tried to copy from youtube that I watch. Hopefully I able to understand this since I dont know what I'm doing <pariatur class="lorem"></pariatur><br><br> I actually don't know if this will work. I'm confused already but I still understand a little bit of it hehe. Ihope I can make something fun out of this!</p>
+            <p >Here down here is the button that I tried to learn how to make a button that can link to other website hehehehehe!<pariatur class="lorem"></pariatur><br><br> love this! and I'm excited to learn more. </p>
         </div>
+
+        <section class="sec" id="section2">
+            <div class="text2">
+                <button type="button1" onclick="location.href='https://github.com/Peolline/Sunflower'">
+                Seeds
+                </button>
+            </div>
+            
+        </section>
 
         <script>
             let wave1 = document.getElementById('wave1');
