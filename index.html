@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>Sunflower</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
 
 
@@ -11,11 +13,21 @@
         <header>
             <h2 class="logo">Lara'S SPACE</h2>
             <nav class="navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="https://github.com/Peolline/Sunflower" target="_blank">GitCat</a>
-                <a href="#">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/Peolline/Sunflower" target="_blank">GitCat</a></li>
+                    <li class="has-submenu">
+                        <a href="#">Contact</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="fab fa-instagram"></i> </a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> </a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+                            <li><a href="#"><i class="far fa-envelope"></i> </a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+            
         </header>
 
 
@@ -54,6 +66,23 @@
             </p>
             <img src="sun-sunflower.png">
         </div>
+
+
+        <section class="sec">
+            <div class="comment-box">
+                <h2>Comments</h2>
+                <form action="#">
+                    <input type="text" name="name" placeholder="Who are you?...">
+                    <input type="email" name="email" placeholder="Give me your email...">
+                    <textarea name="comment" placeholder="What's in your mind?..."></textarea>
+                    <button type="submit"> Submit </button>
+                </form>
+
+            </div>
+        </section>
+
+
+
 
         <script>
             let cloud1 = document.getElementById('cloud1');
@@ -98,7 +127,38 @@
             })
         </script>
 
-  
+
+        <php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $comment = $_POST["comment"];
+
+            $to = "gleeermadi@gmail.com"; 
+            $subject = "New Comment";
+            $message = "Name: $name\nEmail: $email\nComment: $comment";
+            $headers = "From: $email";
+
+            if (mail($to, $subject, $message, $headers)) {
+                echo "Message sent successfully.";
+            } else {
+                echo "Failed to send message.";
+            }
+        }
+        >
+
+<!--         
+        <script>
+            ScrollReveal({ 
+                reset : true,
+                distance: '500px',
+                duration : 2500,
+                delay : 400
+            });
+
+            ScrollReveal().reveal('.intro1 img', {delay: 20, origin:'right', interval:200});
+        </script>
+   -->
         
     </body>
 </html>
