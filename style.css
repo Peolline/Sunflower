@@ -217,6 +217,7 @@ section img#sunflower1
     display: block;
     justify-self: end;
     margin-right: 20px;
+    animation: moveUpDown 0.8s ease-in-out infinite alternate;
 }
 
 .intro2{
@@ -281,5 +282,15 @@ section img#sunflower1
     100% {
         opacity: 1;
         transform: translateY(0px) scale(1);
+    }
+}
+
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-0.7%); /* Move up */
+    }
+    100% {
+        transform: translateY(1%); /* Move down */
     }
 }
