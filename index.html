@@ -6,8 +6,16 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
+
     <body>
         <header>
+            <h2 class="logo">Lara'S SPACE</h2>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </nav>
         </header>
 
 
@@ -17,15 +25,45 @@
                 <img src="bakgrouncolor.png" id="backgourcolor">
                 <img src="cloud1.png" id="cloud1" >
                 <img src="cloud2.png" id="cloud2">
-                <h2 id="text">Sunflower Field</h2>
+                <h2 class="big-title" id="text">Sunflower Field</h2>
                 <img src="sunflower1.png" id="sunflower1">
                 <a href="#" id="btn">Explore</a>
+                
             </div>
             <div class="wave" id="wave1" style="--i:1;"></div>
             <div class="wave" id="wave2" style="--i:2;"></div>
             <div class="wave" id="wave3" style="--i:3;"></div>
             <div class="wave" id="wave4" style="--i:4;"></div>
         </section>
+
+
+        <div class="sec" id="section1">
+            <h2>Hello!</h2>
+        </div>
+
+        <div class="intro1" id="section1">
+            <p>Hey this is me, Lara. I'm trying to do this wavey thing that I tried to copy from youtube that I watch. Hopefully I able to understand this since I dont know what I'm doing <pariatur class="lorem"></pariatur><br><br> I actually don't know if this will work. I'm confused already but I still understand a little bit of it hehe. Ihope I can make something fun out of this!</p>
+            <img src="AboutMeChar.png">
+            <p>Here down here is the button that I tried to learn how to make a button that can link to other website hehehehehe!<pariatur class="lorem"></pariatur><br><br> love this! and I'm excited to learn more. </p>
+        </div>
+
+        <div class="intro2" id="section1">
+            <p>
+                <Strong>Sunflower (Helianthus annuus)</Strong><br><br>This flower called Sunflower because of it's behavior to follow a sun (sun follower), which this behavior called <strong>heliotropism</strong>.<br><br> Their buds and blossoms start the day facing east and then follow the sun until it sets in the west. But, when the sunflower are undergoing seed production, mature flower heads become heavier and stiffer than usual and remain facing east for the rest of the day. 
+            </p>
+            <img src="sun-sunflower.png">
+        </div>
+
+        <section class="sec" id="section2">
+            <div class="text2">
+                <button type="button1" onclick="location.href='https://github.com/Peolline/Sunflower'">
+                Seeds
+                </button>
+            </div>
+            
+        </section>
+
+
 
         <script>
             let cloud1 = document.getElementById('cloud1');
@@ -39,6 +77,7 @@
                 window.scrollTo({
                     top: nextsection,
                     behavior:'smooth'
+
                 })
             })
 
@@ -49,25 +88,9 @@
                 sunflower1.style.bottom = value * 0.25 + 'px';
                 text.style.top = value * 0.25 + 'px';
             })
-
         </script>
 
 
-
-        <div class="sec" id="section1">
-            <h2>Hello!</h2>
-            <p>Hey this is me, Lara. I'm trying to do this wavey thing that I tried to copy from youtube that I watch. Hopefully I able to understand this since I dont know what I'm doing <pariatur class="lorem"></pariatur><br><br> I actually don't know if this will work. I'm confused already but I still understand a little bit of it hehe. Ihope I can make something fun out of this!</p>
-            <p >Here down here is the button that I tried to learn how to make a button that can link to other website hehehehehe!<pariatur class="lorem"></pariatur><br><br> love this! and I'm excited to learn more. </p>
-        </div>
-
-        <section class="sec" id="section2">
-            <div class="text2">
-                <button type="button1" onclick="location.href='https://github.com/Peolline/Sunflower'">
-                Seeds
-                </button>
-            </div>
-            
-        </section>
 
         <script>
             let wave1 = document.getElementById('wave1');
