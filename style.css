@@ -9,15 +9,48 @@
 }
 
 
-
-header .logo
-{
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
     color: #111;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
+
+.logo{
+    font-size: 1.5em;
+    color: black;
+    pointer-events: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 9px 15px 9px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 0px 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover{
+    background: rgb(225, 124, 24);
+    border: 2px solid rgb(225, 124, 24);
+    color: white;
+}
+
 
 section
 {
@@ -67,7 +100,22 @@ section img#sunflower1
     color: black;
     font-size: 1.5em;
     z-index: 10;
-    transform: translateY(-250px);
+}
+
+#btn:hover{
+    background: rgb(248, 157, 66);
+    color: white;
+}
+
+.big-title{
+    padding-top: -225px;
+    animation: fade-up 0.9s;
+    position: relative;
+    color: rgb(19, 10, 9);
+    white-space: nowrap;
+    font-size: 10.5vw;
+    z-index: 9;
+    font-family: 'Poppins', sans-serif;
 }
 
 .wave
@@ -112,6 +160,63 @@ section img#sunflower1
 }
 
 
+
+.sec
+{
+    position: relative;
+    padding-left: 100px;
+    padding-bottom: none;
+    padding-top: 100px;
+    background: #b1d188;
+}
+
+.sec h2
+{
+    font-size: 5em;
+    color: #111;
+}
+
+.sec p
+{
+    font-size: 2.2em;
+    color: #111;
+}
+
+
+.intro1{
+    font-size: 1.2em;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: none;
+    background: #b1d188;
+}
+
+.intro1 img{
+    float: right;
+    max-width: 200%;
+    height: auto;
+}
+
+.intro2{
+    font-size: 1.2em;
+    position: relative;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: none;
+    background: #b1d188;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    overflow: hidden;
+}
+
+.intro2 img{
+    float: right;
+    max-width: 200%;
+    height: auto;
+}
+
 .section2{
     background: #b1d188;
 }
@@ -140,6 +245,7 @@ button{
 
 
 
+
 @keyframes animate
 {
     0%,100%
@@ -152,22 +258,26 @@ button{
     }
 }
 
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
 
-.sec
-{
-    position: relative;
-    padding: 100px;
-    background: #b1d188;
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
-.sec h2
-{
-    font-size: 3em;
-    color: #111;
-}
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
 
-.sec p
-{
-    font-size: 1.2em;
-    color: #111;
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
