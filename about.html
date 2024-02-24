@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About-Sunflower</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h2 class="logo">Lara'S SPACE</h2>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+
+
+        <section>
+            <div class="cloud">
+                <img src="baCKINVISIBLEr.png" id="baCKINVISIBLEr">
+                <img src="bakgrouncolor.png" id="backgourcolor">
+                <img src="cloud1.png" id="cloud1" >
+                <img src="cloud2.png" id="cloud2">
+                <img src="sunflower1.png" id="sunflower1">
+            </div>
+            <div class="wave" id="wave1" style="--i:1;"></div>
+            <div class="wave" id="wave2" style="--i:2;"></div>
+            <div class="wave" id="wave3" style="--i:3;"></div>
+            <div class="wave" id="wave4" style="--i:4;"></div>
+        </section>
+
+        <script>
+            let cloud1 = document.getElementById('cloud1');
+            let cloud2 = document.getElementById('cloud2');
+            let sunflower1 = document.getElementById('sunflower1');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            
+            btn.addEventListener('click', function(){
+                const nextsection = document.getElementById('section1').offsetTop;
+                window.scrollTo({
+                    top: nextsection,
+                    behavior:'smooth'
+                })
+            })
+
+            window.addEventListener('scroll', function(){
+                let value=window.scrollY;
+                cloud1.style.top = value * 0.25 + 'px';
+                cloud2.style.top = value * 0.25 + 'px';
+                sunflower1.style.bottom = value * 0.25 + 'px';
+                text.style.top = value * 0.25 + 'px';
+            })
+
+        </script>
+
+
+
+        <div class="sec" id="section1">
+            <h2>Hello!</h2>
+            <p>Hey this is me, Lara. I'm trying to do this wavey thing that I tried to copy from youtube that I watch. Hopefully I able to understand this since I dont know what I'm doing <pariatur class="lorem"></pariatur><br><br> I actually don't know if this will work. I'm confused already but I still understand a little bit of it hehe. Ihope I can make something fun out of this!</p>
+            <p >Here down here is the button that I tried to learn how to make a button that can link to other website hehehehehe!<pariatur class="lorem"></pariatur><br><br> love this! and I'm excited to learn more. </p>
+        </div>
+
+        <section class="sec" id="section2">
+            <div class="text2">
+                <button type="button1" onclick="location.href='https://github.com/Peolline/Sunflower'">
+                Seeds
+                </button>
+            </div>
+            
+        </section>
+
+        <script>
+            let wave1 = document.getElementById('wave1');
+            let wave2 = document.getElementById('wave2');
+            let wave3 = document.getElementById('wave3');
+            let wave4 = document.getElementById('wave4');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                wave1.style.backgroundPositionX = 400 + value + 4 + 'px';
+                wave2.style.backgroundPositionX = 300 + value + -4 + 'px';
+                wave3.style.backgroundPositionX = 200 + value + 2 + 'px';
+                wave4.style.backgroundPositionX = 100 + value + -2 + 'px';
+            })
+        </script>
+    </body>
+</html>
